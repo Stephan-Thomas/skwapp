@@ -6,7 +6,7 @@ const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-black fixed p-4 sm:p-6 md:flex md:justify-between md:items-center">
+    <nav className="bg-white text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
         <div className="container mx-auto flex justify-between items-center">
             <a href="" className="text-2xl font-bold">Skwapp</a>
             <div className="`${isOpen?'flex':'hidden'} flex-col md:flex-row`">

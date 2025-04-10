@@ -1,103 +1,116 @@
-import Image from "next/image";
+import React from 'react'
+import  Navbar  from './home/components/Navbar'
 
-export default function Home() {
+const home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+    <Navbar />
+    <main>
+      <section className='bg-gray-300 text-white w-full h-screen flex flex-col justify-start relative h-screen mb-36'>
+        <div className='bg-opacity-50 z-30 pt-50 ml-5'>
+        <h1 className='text-6xl'>Our freelancers <br /> will take it from here</h1>
+        <input className='bg-white rounded-md w-8/12 h-11 mt-6 placeholder-gray-400 p-3' type="text" placeholder='search for any service'/>
+        <div className='flex gap-4 mt-6' >
+        <button className='bg-transparent border rounded-md p-2 hover:cursor-pointer'>website design</button>
+        <button className='bg-transparent border rounded-md p-2 hover:cursor-pointer'>logo design</button>
+        <button className='bg-transparent border rounded-md p-2 hover:cursor-pointer'>video editing</button>
+        <button className='bg-transparent border rounded-md p-2 hover:cursor-pointer'>Architecture and Interior design</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </div>
+        <video
+    autoPlay
+    loop
+    muted
+    className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+  >
+    <source
+      src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+      </section>
+      <section className='bg-white text-black'>
+        <article className='flex justify-evenly'>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Programming & Tech</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Graphics & Design</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Digital Marketing</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Writing & Translation</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Video & Animation</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>AI Services</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Music & Audio</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Business</p></div>
+        <div className='p-4 w-max text-sm'> <img src="#" alt="pic" className='shadow-md w-24 h-24'/><p className='pt-3'>Consulting</p></div>
+        </article>
+        <article>
+          <h1 className='text-5xl font-bold'>Popular Services</h1>
+          <div className='flex justify-between'>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Website Development</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Logo Design</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>SEO</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Architecture & Interior Design</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Voice Over</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Social Media Marketing</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>UGC Videos</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Software Development</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Data Science & ML</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Product Photography</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>E-Commerce Marketing</p>
+              <img src="#" alt="pic" />
+            </div>
+            <div className='w-50 h-45 m-8 p-8 bg-green-900 rounded-md'>
+              <p className='w-40'>Video Editing</p>
+              <img src="#" alt="pic" />
+            </div>
+          </div>
+        </article>
+        <article className='bg-black text-white rounded-lg m-10 p-6'>
+        {/* chrome://global/skin/media/pause-fill.svg     ---background url*/}
+          <div >
+            <h6>SkwappGo.</h6>
+            <h1>Instant results. <br /> Top talent</h1>
+            <p>Get what you need faster from freelancers who trained their own personal AI Creation Models. Now you can browse, prompt, and generate instantly. And if you need a tweak or change, the freelancer is always there to help you perfect it.</p>
+            <button className='bg-white text-black border-none rounded-md hover:border-gray-200 border-2 '>Get started</button>
+          </div>
+          <div>
+            <input type="text" name="text" id="text" />
+          </div>
+        </article>
+      </section>
+    </main>
+    </>
+  )
 }
+
+export default home
