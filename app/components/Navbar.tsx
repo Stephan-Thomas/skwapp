@@ -6,8 +6,8 @@ const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
-        <div className="container mx-auto flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
+        <div className="container mx-auto flex justify-between items-center z-40">
             <a href="" className="text-2xl font-bold">Skwapp</a>
             <div className="`${isOpen?'flex':'hidden'} flex-col md:flex-row`">
                 <Link href="/" className="mx-2 hover:text-green-300">Home</Link>
