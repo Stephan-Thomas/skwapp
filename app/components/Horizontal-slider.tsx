@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { jobs } from '../data/Jobs';
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { jobs } from "../data/Jobs";
 
 export default function HorizontalScroll() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const scrollAmount = direction === "left" ? -300 : 300;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   return (
     <div className="relative w-full px-4">
       <button
-        onClick={() => scroll('left')}
+        onClick={() => scroll("left")}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full"
       >
         <ChevronLeft />
@@ -36,13 +36,17 @@ export default function HorizontalScroll() {
               <h2 className="font-bold text-lg">{job.title}</h2>
               <p className="text-sm text-gray-600">{job.company}</p>
             </div>
-            <p className="text-xs text-gray-500">{job.location}</p>
+            <img
+              src={job.image}
+              alt=""
+              className="min-w-[50px] h-[70px] rounded-xl"
+            />
           </div>
         ))}
       </div>
 
       <button
-        onClick={() => scroll('right')}
+        onClick={() => scroll("right")}
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow p-2 rounded-full"
       >
         <ChevronRight />

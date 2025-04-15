@@ -165,7 +165,7 @@ const home = () => {
         <article className="bg-gray-200 text-black rounded-lg m-10 pt-6 pb-0 px-6 flex">
           <div className="space-y-8 mx-6 mt-3 w-full">
             <h6>skwapp-pro</h6>
-            <h1 className="text-4xl ">
+            <h1 className="text-4xl">
               The premium <span className="text-green-300">freelance</span>{" "}
               solution for businesses
             </h1>
@@ -195,20 +195,27 @@ const home = () => {
           </div>
           <div className="hidden md:flex my-6 mt-3 w-full">
             <img
-              src="fiverr-pro.webp"
+              src="/images/fiverr-pro.webp"
               alt="people"
               className="object-contain"
             />
           </div>
         </article>
-        <article>
-          <h1>What success on Skwapp looks like</h1>
-          <p>
-            Vontélle Eyewear turns to Fiverr freelancers to bring their vision
-            to life.
-          </p>
-          <div>
-            <video autoPlay loop muted>
+        <article className="text-gray-600">
+          <div className="mx-8 space-y-4">
+            <h1 className="text-4xl">What success on Skwapp looks like</h1>
+            <p>
+              Vontélle Eyewear turns to Skwapp freelancers to bring their vision
+              to life.
+            </p>
+          </div>
+          <div className="m-10 pt-6">
+            <video
+              autoPlay
+              loop
+              muted
+              className="h-80 w-full object-cover rounded-xl border-2 border-blue-600"
+            >
               <source
                 src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/generic_asset/asset/03e1ef43201724755eceea67985317b2-1722432611137/Vontelle%20Breakthrough%209x16"
                 type="video/mp4"
@@ -216,6 +223,20 @@ const home = () => {
               Your browser does not support the video tag.
             </video>
           </div>
+        </article>
+        <article className="text-gray-600">
+          <h1 className="mx-8 text-4xl">Vontélle’s trusted services</h1>
+          <HorizontalScroll />
+        </article>
+        <article className="text-gray-600">
+          <h1 className="mx-8 text-4xl">Make it all happen with freelancers</h1>
+          <ul>
+            <li>Access a pool of top talent across 700 categories</li>
+            <li>Enjoy a simple, easy-to-use matching experience</li>
+            <li>Get quality work done quickly and within budget</li>
+            <li>Only pay when you’re happy</li>
+          </ul>
+          <button>Join Now</button>
         </article>
       </main>
     </>
