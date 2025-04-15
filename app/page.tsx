@@ -6,8 +6,8 @@ const home = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <section className="bg-gray-300 text-white w-screen h-screen flex flex-col justify-start relative">
+      <main className="bg-white">
+        <section className="bg-green-300 text-white w-screen h-screen flex flex-col justify-start relative">
           <div className="bg-opacity-50 z-30 pt-50 ml-5">
             <h1 className="text-6xl">
               Our freelancers <br /> will take it from here
@@ -36,7 +36,7 @@ const home = () => {
             autoPlay
             loop
             muted
-            className="absolute z-10 h-screen w-screen object-cover"
+            className="hidden md:block md:absolute md:z-10 md:h-screen md:w-screen object-cover"
           >
             <source
               src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4"
@@ -46,7 +46,7 @@ const home = () => {
           </video>
         </section>
         <section className="bg-white text-black">
-          <article className="flex justify-evenly">
+          <article className="grid grid-cols-3 md:flex md:justify-evenly md:grid-cols-none">
             <div className="p-4 w-max text-sm">
               {" "}
               <img
@@ -135,8 +135,8 @@ const home = () => {
             </h1>
             <HorizontalScroll />
           </article>
-          <article className="bg-black text-white rounded-lg m-10 pt-6 pb-0 px-6 flex">
-            <div className="mt-3 w-6/12 space-y-8">
+          <article className="flex flex-col-reverse md:flex-row bg-black text-white rounded-lg m-10 pt-6 pb-0 px-6">
+            <div className="mt-3 w-full md:w-1/2 space-y-8">
               <h6>SkwappGo.</h6>
               <h1 className="text-4xl">
                 Instant results. <br /> Top talent
@@ -147,11 +147,11 @@ const home = () => {
                 generate instantly. And if you need a tweak or change, the
                 freelancer is always there to help you perfect it.
               </p>
-              <button className="bg-gray-200 text-black p-1 border-none rounded-md hover:border-white border-2 ">
+              <button className="bg-gray-200 text-black mb-4 p-2 border-none rounded-md hover:border-white border-2 hover:cursor-pointer">
                 Get started
               </button>
             </div>
-            <div className="w-6/12 h-auto flex-shrink-0">
+            <div className="w-full md:w-1/2 h-auto flex-shrink-0">
               <video autoPlay loop muted>
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/v1/video-attachments/generic_asset/asset/f4b1924c68e6916c6d100527c7ff3d9c-1743494584325/Image%20model"
@@ -162,6 +162,61 @@ const home = () => {
             </div>
           </article>
         </section>
+        <article className="bg-gray-200 text-black rounded-lg m-10 pt-6 pb-0 px-6 flex">
+          <div className="space-y-8 mx-6 mt-3 w-full">
+            <h6>skwapp-pro</h6>
+            <h1 className="text-4xl ">
+              The premium <span className="text-green-300">freelance</span>{" "}
+              solution for businesses
+            </h1>
+            <ul className="space-y-8 block md:grid md:grid-cols-2 md:gap-4">
+              <li>
+                <strong>Dedicated hiring experts</strong>
+                <br /> Count on an account manager to find you the right talent
+                and see to your project’s every need.
+              </li>
+              <li>
+                <strong>Satisfaction guarantee</strong> <br /> Order
+                confidently, with guaranteed refunds for less-than-satisfactory
+                deliveries.
+              </li>
+              <li>
+                <strong>Advanced management tools</strong> <br /> Seamlessly
+                integrate freelancers into your team and projects.
+              </li>
+              <li>
+                <strong>Flexible payment models</strong> <br /> Pay per project
+                or opt for hourly rates to facilitate longer-term collaboration
+              </li>
+            </ul>
+            <button className="bg-gray-400 text-black mb-4 p-3 border-none rounded-md hover:border-white border-2 hover:cursor-pointer">
+              Try Now
+            </button>
+          </div>
+          <div className="hidden md:flex my-6 mt-3 w-full">
+            <img
+              src="fiverr-pro.webp"
+              alt="people"
+              className="object-contain"
+            />
+          </div>
+        </article>
+        <article>
+          <h1>What success on Skwapp looks like</h1>
+          <p>
+            Vontélle Eyewear turns to Fiverr freelancers to bring their vision
+            to life.
+          </p>
+          <div>
+            <video autoPlay loop muted>
+              <source
+                src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/generic_asset/asset/03e1ef43201724755eceea67985317b2-1722432611137/Vontelle%20Breakthrough%209x16"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
       </main>
     </>
   );
