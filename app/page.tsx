@@ -1,14 +1,16 @@
 import React from "react";
+import Link from "next/link";
 import Navbar from "./components/Navbar";
 import HorizontalScroll from "./components/Horizontal-slider";
+import Footer from "./components/Footer";
 
 const home = () => {
   return (
     <>
       <Navbar />
       <main className="bg-white">
-        <section className="bg-green-300 text-white w-screen h-screen flex flex-col justify-start relative">
-          <div className="bg-opacity-50 z-30 pt-50 ml-5">
+        <section className="bg-green-300 text-white w-screen  h-screen flex flex-col justify-start relative">
+          <div className="bg-opacity-50 z-30 mt-60 ml-5">
             <h1 className="text-6xl">
               Our freelancers <br /> will take it from here
             </h1>
@@ -46,86 +48,50 @@ const home = () => {
           </video>
         </section>
         <section className="bg-white text-black">
-          <article className="grid grid-cols-3 md:flex md:justify-evenly md:grid-cols-none">
-            <div className="p-4 w-max text-sm">
+          <article className="grid grid-cols-3 mt-4 md:flex md:justify-evenly md:grid-cols-none">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/tech.svg" alt="pic" />
               <p className="pt-3">Programming & Tech</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/graphics.svg" alt="pic" />
               <p className="pt-3">Graphics & Design</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/digital.svg" alt="pic" />
               <p className="pt-3">Digital Marketing</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/writing.svg" alt="pic" />
               <p className="pt-3">Writing & Translation</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/video.svg" alt="pic" />
               <p className="pt-3">Video & Animation</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/ai.svg" alt="pic" />
               <p className="pt-3">AI Services</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/music.svg" alt="pic" />
               <p className="pt-3">Music & Audio</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/business.svg" alt="pic" />
               <p className="pt-3">Business</p>
             </div>
-            <div className="p-4 w-max text-sm">
+            <div className="p-4 text-sm shadow rounded-lg w-28 h-28">
               {" "}
-              <img
-                src="#"
-                alt="pic"
-                className="shadow p-2 rounded-lg w-24 h-24"
-              />
+              <img src="/images/consulting.svg" alt="pic" />
               <p className="pt-3">Consulting</p>
             </div>
           </article>
@@ -228,17 +194,261 @@ const home = () => {
           <h1 className="mx-8 text-4xl">Vontélle’s trusted services</h1>
           <HorizontalScroll />
         </article>
-        <article className="text-gray-600">
-          <h1 className="mx-8 text-4xl">Make it all happen with freelancers</h1>
-          <ul>
-            <li>Access a pool of top talent across 700 categories</li>
-            <li>Enjoy a simple, easy-to-use matching experience</li>
-            <li>Get quality work done quickly and within budget</li>
-            <li>Only pay when you’re happy</li>
+        <article className="text-gray-600 mt-10 mx-10 my-10 p-8 space-y-12">
+          <h1 className="text-4xl">Make it all happen with freelancers</h1>
+          <ul className="block md:flex md:justify-between">
+            <li className="w-50">
+              <img src="/images/pool.svg" alt="squares" className="pb-2" />
+              Access a pool of top talent across 700 categories
+            </li>
+            <li className="w-50">
+              <img src="/images/easy.svg" alt="squares" className="pb-2" />
+              Enjoy a simple, easy-to-use matching experience
+            </li>
+            <li className="w-50">
+              <img src="/images/quick.svg" alt="squares" className="pb-2" />
+              Get quality work done quickly and within budget
+            </li>
+            <li className="w-50">
+              <img src="/images/pay.svg" alt="squares" className="pb-2" />
+              Only pay when you’re happy
+            </li>
           </ul>
-          <button>Join Now</button>
+          <button className="bg-gray-400 text-black block mx-auto mb-4 p-3 border-none rounded-md hover:border-white border-2 hover:cursor-pointer">
+            Join Now
+          </button>
+        </article>
+
+        <article className="m-10 pt-6 pb-0 px-6">
+          <h1 className="text-4xl text-black">Made on Skwapp</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-fr">
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="row-span-2 rounded-lg w-80 h-full object-cover"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="row-span-3 rounded-lg w-80 h-full object-cover"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="row-span-3 rounded-lg w-80 h-full object-cover"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="row-span-3 rounded-lg w-80 h-full object-cover"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="rounded-lg w-80 h-auto"
+            />
+            <img
+              src="/images/product.jpg"
+              alt="tests"
+              className="row-span-2 rounded-lg w-80 h-full object-cover"
+            />
+          </div>
+        </article>
+
+        <article className="bg-purple-600 flex flex-col justify-center items-center rounded-lg m-10 h-min-50 p-8">
+          <h1 className="text-6xl">
+            Freelance services at your{" "}
+            <span className="text-orange-500">fingertips</span>
+          </h1>
+          <button className="bg-gray-400 text-black block m-auto w-max p-3 border-none rounded-md hover:border-white border-2 hover:cursor-pointer">
+            Join Skwapp
+          </button>
+        </article>
+        <article className="bg-white text-gray-400 justify-evenly flex gap-4">
+          <ul className="space-y-4">
+            <p className=" text-gray-800 font-bold">Categories</p>
+            <li>
+              <Link href="/" className="hover:underline">
+                Graphics & Design
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Digital Marketing
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                AI Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Music & Audio
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Conslting
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-4">
+            <p className=" text-gray-800 font-bold">For Clients</p>
+            <li>
+              <Link href="/" className="hover:underline">
+                How Skwapp Works
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Customer Success Stories
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Trust & Safety
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Quality Guide
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-4">
+            <p className=" text-gray-800 font-bold">For Freelancers</p>
+            <li>
+              <Link href="/" className="hover:underline">
+                Become a Fiverr Freelancer
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Become an Agency
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                AI Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Music & Audio
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Conslting
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-4">
+            <p className=" text-gray-800 font-bold">categories</p>
+            <li>
+              <Link href="/" className="hover:underline">
+                Graphics & Design
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Digital Marketing
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                AI Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Music & Audio
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Conslting
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-4">
+            <p className=" text-gray-800 font-bold">categories</p>
+            <li>
+              <Link href="/" className="hover:underline">
+                Graphics & Design
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Digital Marketing
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                AI Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Music & Audio
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:underline">
+                Conslting
+              </Link>
+            </li>
+          </ul>
         </article>
       </main>
+
+      <Footer />
     </>
   );
 };

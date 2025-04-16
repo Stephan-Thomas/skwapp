@@ -30,16 +30,15 @@ export default function HorizontalScroll() {
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="min-w-[200px] h-[140px] bg-white rounded-xl shadow-md p-4 flex flex-col justify-between shrink-0 border border-gray-200"
+            className="w-[200px] h-[160px] bg-white rounded-xl shadow-md p-4 flex flex-col justify-between shrink-0 border border-gray-200"
           >
             <div>
               <h2 className="font-bold text-lg">{job.title}</h2>
-              <p className="text-sm text-gray-600">{job.company}</p>
             </div>
             <img
               src={job.image}
               alt=""
-              className="min-w-[50px] h-[70px] rounded-xl"
+              className="w-[80px] h-[70px] rounded-xl"
             />
           </div>
         ))}
